@@ -651,14 +651,14 @@ footer {
         right: -100%;
         top: 0;
         flex-direction: column;
-        background-color: white; /* Change to match your design */
+        background-color: #eaeaea;
         width: 70%;
         height: 100vh;
         text-align: center;
         transition: 0.3s;
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
         z-index: 100;
-        padding-top: 60px;
+        padding-top: 20px;
     }
     
     nav ul.active {
