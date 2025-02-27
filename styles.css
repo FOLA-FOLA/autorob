@@ -58,7 +58,7 @@ ul {
 
 body {
   padding: 0;
-  background-color: #f3d060;
+  background-color: white;
 }
 .container {
   width: min(120ch, calc(100% - 2rem));
