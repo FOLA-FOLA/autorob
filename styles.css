@@ -170,7 +170,7 @@ nav ul {
   display: flex;
   justify-content: end;
   grid-template-columns: repeat(3, auto);
-  gap: 1rem;
+  gap: 0.5rem;
 }
 nav ul li {
   text-align: center;
@@ -594,10 +594,16 @@ footer {
     .footer-column {
         flex: 0 0 50%;
     }
+    .nav ul li a {
+        flex: 0 0 50%;
+    }
 }
 
 @media (max-width: 480px) {
     .footer-column {
         flex: 0 0 100%;
+    }
+    .nav ul li a {
+        flex: 0 0 50%;
     }
 }
