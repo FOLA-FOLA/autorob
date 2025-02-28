@@ -542,6 +542,7 @@ footer {
     color: white;
     padding: 30px 0;
     font-family: Arial, sans-serif;
+    margin-top: 2rem;
 }
 
 .footer-container {
@@ -631,6 +632,15 @@ footer {
     margin: 5px auto;
     background-color: black;
     transition: all 0.3s ease-in-out;
+}
+
+.teach {
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+}
+
+.teach > h4 {
+    font-weight: 400;
 }
 
 /* Mobile view styles */
