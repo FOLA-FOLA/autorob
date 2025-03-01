@@ -56,6 +56,25 @@ ul {
   /*-- annoying margin at top --- */
 }
 
+.piprofiles {
+    margin: 2rem;
+    display: flex;
+    width: 50%;
+}
+
+.phdprofiles {
+    margin: 2rem;
+    display: flex;
+    width: 50%;
+}
+.mastersprofiles {
+    margin: 2rem;
+    display: flex;
+    width: 50%;
+}
+
+.phdprofiles >
+
 body {
   padding: 0;
   background-color: white;
@@ -647,6 +666,11 @@ footer {
 @media (max-width: 768px) {
     .hamburger {
         display: block;
+        background-color: #f6f6f6;
+    }
+
+    .research > h4 {
+        font-size: 0.8rem;
     }
     
     header {
