@@ -662,6 +662,31 @@ footer {
     font-weight: 400;
 }
 
+.profiletext {
+    padding-left: 2rem;
+}
+
+.phdstudents, .pi, .masters {
+    border-top: 2px;
+    border-color: #1f2020;
+}
+
+.profile {
+    display: flex;
+    margin: 1rem;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.profile > div {
+    width: 17rem;s
+    height: 17rem;
+}
+
+.profile > div > img {
+    object-fit: cover;
+}
+
 /* Mobile view styles */
 @media (max-width: 768px) {
     .hamburger {
