@@ -29,58 +29,10 @@
     </div>
   <main>
     <div class="container">
-        <div class="pi">
-            <h2>Primary Investigator</h2>
-            <div class="profile">
-                <div>
-                    <img src="drbola.png" width="200" height="200"/>
-                </div>
-                <div class="profiletext">
-                    <h3>Omobolanle Ogunseiju</h3>
-                    <p>Omobolanle Ogunseiju is an assistant professor in the School of Building Construction, at Georgia Tech. 
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="phdstudents">
-            <h2>PhD Students</h2>
-            <div class="phdprofiles">
-                <div class="profile">
-                    <div>
-                        <img src="mariamtomori.jpg" width="200" height="200" />
-                    </div>
-                    <div class="profiletext">
-                        <h3>Mariam Tomori</h3>
-                        <p>Mariam Tomori is a Graduate Research Assistant and Ph.D. student at the School of Building Construction.
-                        </p>
-                    </div>
-                </div>
-                <div class="profile">
-                    <div>
-                        <img src="joshuansiah.jpg" width="200" height="200" />
-                    </div>
-                    <div class="profiletext">
-                        <h4>Joshua Nsiah Addo Ofori</h4>
-                        <p>Joshua Nsiah Addo Ofori is currently a PhD student in the School of Building Construction at Georgia Tech
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="masters">
-            <h2>Masters Students</h2>
-            <div class="mastersprofiles">
-                <div class="profile">
-                    <div>
-                        <img src="sriram.jpg" width="200" height="200" />
-                    </div>
-                    <div class="profiletext">
-                        <h3>Sriram Gnanaprakasam</h3>
-                        <p>Sriram Gnanaprakasam is a Master's Student in the School of Civil and Environmental Engineering
-                        </p>
-                    </div>
-                </div>
-            </div>
+        <h1>Lab Members</h1>
+        
+        <div class="team-grid" id="teamGrid">
+            <!-- Team members will be added here dynamically -->
         </div>
     </div>
   </main>
@@ -119,5 +71,99 @@
     </div>
     <script src="script.js"></script>
   </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Sample team member data - replace with your actual data
+        const teamMembers = [
+            {
+                name: "Omobolanle Ogunseiju",
+                title: "Primary Investigator",
+                bio: "Omobolanle Ogunseiju is an assistant professor in the School of Building Construction, at Georgia Tech.",
+                image: "drbola.png",
+                email: "omobolanle@gatech.edu",
+                department: "Primary Investigator"
+            },
+            {
+                name: "Mariam Tomori",
+                title: "PhD Student",
+                bio: "Mariam Tomori is a Graduate Research Assistant and Ph.D. student at the School of Building Construction.",
+                image: "mariamtomori.jpg",
+                email: "mtomori3@gatech.edu",
+                department: "Graduate Research Assistant"
+            },
+            {
+                name: "Joshua Nsiah Addo Ofori",
+                title: "PhD Student",
+                bio: "Joshua Nsiah Addo Ofori is currently a Graduate Research Assistant and PhD student in the School of Building Construction at Georgia Tech",
+                image: "joshuansiah.jpg",
+                email: " ",
+                department: "Graduate Research Assistant"
+            },
+            {
+                name: "Sriram Gnanaprakasam",
+                title: "Masters Student",
+                bio: "Sriram Gnanaprakasam is a Master's Student in the School of Civil and Environmental Engineering",
+                image: "sriram.jpg",
+                email: " ",
+                department: "Graduate Research Assistant"
+            }
+        ];
+        
+        // Generate profile cards for each team member
+        const teamGrid = document.getElementById('teamGrid');
+        
+        teamMembers.forEach(member => {
+            const card = createProfileCard(member);
+            teamGrid.appendChild(card);
+        });
+        
+        // Add event listeners to toggle detail sections
+        document.querySelectorAll('.toggle-details').forEach(button => {
+            button.addEventListener('click', function() {
+                const details = this.previousElementSibling;
+                details.classList.toggle('active');
+                this.textContent = details.classList.contains('active') ? 'Show Less' : 'Contact';
+            });
+        });
+    });
+    
+    function createProfileCard(member) {
+        const card = document.createElement('div');
+        card.className = 'profile-card';
+        
+        card.innerHTML = `
+            <div class="card-header">
+                <img src="${member.image}" alt="${member.name}">
+            </div>
+            <div class="card-body">
+                <h2 class="member-name">${member.name}</h2>
+                <h3 class="member-title">${member.title}</h3>
+                <p class="member-bio">${member.bio}</p>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn Profile">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" aria-label="Twitter Profile">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="mailto:${member.email}" aria-label="Email">
+                        <i class="far fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="profile-details">
+                <div class="details-content">
+                    <div class="detail-item">
+                        <span class="detail-label">Email:</span>
+                        <span class="detail-value">${member.email}</span>
+                    </div>
+                </div>
+            </div>
+            <button class="toggle-details">Contact</button>
+        `;
+        
+        return card;
+    }
+</script>
   </body>
 </html>
