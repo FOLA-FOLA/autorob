@@ -729,7 +729,7 @@ footer {
         transition: 0.3s;
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
         z-index: 100;
-        padding-top: 10px;
+        padding-top: 2px;
     }
     
     nav ul.active {
@@ -737,7 +737,7 @@ footer {
     }
     
     nav ul li {
-        margin: 1rem 0;
+        margin: 0.5rem 0;
         display: block;
     }
     
