@@ -1055,3 +1055,16 @@ h1 {
 .indexbuttton {
     text-align: center;
 }
+
+.flogo {
+    width: 15rem;
+}
+.flogos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fundingtext {
+    text-align: center;
+    margin-top: 3rem;
+}
