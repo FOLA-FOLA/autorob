@@ -76,6 +76,7 @@ ul {
 .herotext > h4 {
     text-align: center;
     font-weight: 300;
+    margin-top: -2rem;
 }
 
 .piprofiles {
@@ -716,6 +717,10 @@ footer {
     .research > h4 {
         font-size: 0.8rem;
     }
+
+    .pubslist > ul > li {
+        font-size: 1rem;
+    }
     
     header {
         display: flex;
@@ -894,6 +899,12 @@ h1 {
     color: #718096;
 }
 
+.indexbuttton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .toggle-details {
     display: block;
     text-align: center;
@@ -986,6 +997,9 @@ h1 {
 
 /* Button Base Styles */
 .see-more-btn {
+
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     display: inline-block;
     padding: 12px 24px;
     background-color: #3498db;
@@ -1028,4 +1042,16 @@ h1 {
     height: 200%;
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
+}
+
+.butn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+
+.indexbuttton {
+    text-align: center;
 }
