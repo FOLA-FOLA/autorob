@@ -55,6 +55,28 @@ ul {
   margin: 0;
   /*-- annoying margin at top --- */
 }
+.hero {
+    background-image: url("background.jpg");
+    background-position: center;
+    height: 90vh;
+}
+.herotext {
+    display: flex;
+    flex-direction: column;
+    align-content: baseline;
+    padding: 3rem;
+    margin: 0.5rem;
+    color: white;
+}
+
+.herotext > h1 {
+    font-size: 4rem;
+    color: white;
+}
+.herotext > h4 {
+    text-align: center;
+    font-weight: 300;
+}
 
 .piprofiles {
     margin: 2rem;
@@ -72,9 +94,6 @@ ul {
     display: flex;
     width: 50%;
 }
-
-.phdprofiles >
-
 body {
   padding: 0;
   background-color: white;
@@ -679,7 +698,7 @@ footer {
 }
 
 .profile > div {
-    width: 17rem;s
+    width: 17rem;
     height: 17rem;
 }
 
@@ -894,4 +913,119 @@ h1 {
     .team-grid {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
+}
+.research-container {
+    padding-top: 5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.research-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 300px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    display: block;
+    color: #333;
+}
+
+.research-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+.research-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.research-content {
+    padding: 15px;
+}
+
+.research-title {
+    font-size: 20px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.research-description {
+    color: #7f8c8d;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.research-tag {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    .research-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .research-card {
+        width: 90%;
+        max-width: 400px;
+    }
+}
+
+/* Button Base Styles */
+.see-more-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover Effect */
+.see-more-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Ripple Effect */
+.see-more-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 0;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.see-more-btn:active::before {
+    width: 200%;
+    height: 200%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
 }
